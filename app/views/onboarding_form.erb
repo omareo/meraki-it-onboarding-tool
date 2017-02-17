@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Onboarding Tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    
+    body {
+        margin-bottom: 60px;
+    }
+    
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #f5f5f5;
+    }
+    
+    .container {
+        width: auto;
+        max-width: 680px;
+        padding: 0 15px;
+    }
+    
+    .container .text-muted {
+        margin: 20px 0;
+    }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Teleworker Kit Creation Tool</h1>
+            <p>This tool will kick off a job that will add a device to inventory, create templated teleworker network and assign it to the device.</p>
+        </div>
+        <form action="/onboarding/" method="POST">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" name="first_name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" name="last_name">
+            </div>
+            <div class="form-group">
+                <label for="team">Team</label>
+                <select class="form-control" name="team">
+                    <option value="IT">IT</option>
+                    <option value="Support">Support</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Engineering">Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="team">Locale</label>
+                <select class="form-control" name="locale">
+                    <option value="San_Francisco">San Francisco</option>
+                    <option value="Sydney">Sydney</option>
+                    <option value="London">London</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="serial">Serial (Z1/MX)</label>
+                <input type="text" class="form-control" name="serial">
+            </div>
+            <input class="btn btn-primary" type="submit">
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Ping omar@meraki with any questions/feedback.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
